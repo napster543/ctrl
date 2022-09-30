@@ -1,0 +1,38 @@
+﻿@model List<aplicacion.Models.EventosModels>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Listar</h1>
+
+<a asp-controller="Evento" asp-action="Guardar"  class="btn btn-success">Crear Nuevo</a>
+
+<table class="table" id="tb_contacto">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td> @item.Nombre_Institucion_Superior </td>
+            <td> @item.Direccion_Institucion </td>
+            <td> @item.Numero_Alumno </td>
+            <td> @item.Hora_inicio </td>
+            <td> @item.Valor_Servicio </td>
+            <td>
+                <a asp-action="Editar" asp-controller="Evento" class="btn btn-primary" asp-route-IdEvento="@item.Id">Editar</a>
+                <a asp-action="Eliminar" asp-controller="Evento" class="btn btn-danger" asp-route-IdEvento="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

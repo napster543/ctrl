@@ -1,0 +1,46 @@
+﻿@model aplicacion.Models.EventosModels
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Guardar</h1>
+
+<div class="card">
+    <h5 class="card-header">Crear Contacto</h5>
+    <div class="card-body">
+        <form asp-action="Guardar" asp-controller="Evento" method="post">
+            <div class="mb-3">
+                <label for="txtCodigo" class="form-label">Nombre Institución</label>
+                <input asp-for="Nombre_Institucion_Superior" type="text" class="form-control" id="txtNombreInstitucion">
+                <span asp-validation-for="Nombre_Institucion_Superior" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="txtCodigo" class="form-label">Dirección Institución</label>
+                <input asp-for="Direccion_Institucion" type="text" class="form-control" id="txtDireccionInstitucion">
+                <span asp-validation-for="Direccion_Institucion" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="txtNumero_Alumno" class="form-label">Numero Alumno</label>
+                <input asp-for="Numero_Alumno" type="text" class="form-control" id="txtNumero_Alumno">
+                <span asp-validation-for="Numero_Alumno" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="txtHora_inicio" class="form-label">Hora Inicio</label>
+                <input asp-for="Hora_inicio" type="text" class="form-control" id="txtHora_inicio">
+                <span asp-validation-for="Hora_inicio" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="txtValor_Servicio" class="form-label">Valor Servicio</label>
+                <input asp-for="Valor_Servicio" type="text" class="form-control" id="txtValor_Servicio">
+                <span asp-validation-for="Valor_Servicio" class="text-danger"></span>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Guardar Datos</button>
+            <a href="javascript:void(0)">Volver a la lista</a>
+
+        </form>
+    </div>
+</div>

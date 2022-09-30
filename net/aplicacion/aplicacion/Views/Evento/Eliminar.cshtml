@@ -1,0 +1,28 @@
+﻿@model aplicacion.Models.EventosModels
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+
+<div class="card">
+    <h5 class="card-header">Eliminar Contacto</h5>
+    <div class="card-body">
+        <form asp-action="Eliminar" asp-controller="Evento" method="post">
+
+            <input asp-for="Id" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar el contacto : @Html.DisplayTextFor(m => m.Nombre_Institucion_Superior) ?
+            </div>
+
+            <button type="submit" class="btn btn-primary">Eliminar</button>
+            <a href="javascript:void(0)">Volver a la lista</a>
+
+        </form>
+    </div>
+</div>
+
+

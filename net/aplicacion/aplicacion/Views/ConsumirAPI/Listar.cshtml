@@ -1,0 +1,34 @@
+﻿@model aplicacion.Models.ConsumoModel
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Consumo API</h1>
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">@Html.DisplayTextFor(m => m.IMEI)</p>
+        <a href="#" class="btn btn-primary">ok</a>
+    </div>
+</div>
+
+<div class="card " style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">@Html.DisplayTextFor(m => m.VehicleID)</p>
+        <a href="#" class="btn btn-primary">ok</a>
+    </div>
+</div>
+
+<div class="card " style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">@Html.DisplayTextFor(m => m.CompanyID)</p>
+        <a href="#" class="btn btn-primary">ok</a>
+    </div>
+</div>
+
+
